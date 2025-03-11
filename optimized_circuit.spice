@@ -1,0 +1,10 @@
+* AI-Optimized Circuit Simulation
+V1 1 0 DC 1.0     ; Optimized Supply Voltage (V1)
+R1 1 2 10000      ; Optimized Resistor (R1)
+C1 2 0 0.001      ; Optimized Capacitor (C1)
+.tran 1n 10u      ; Transient analysis (time step: 1ns, total time: 10µs)
+.control
+run
+plot v(2)        ; Print voltage at node 2
+.endc
+.end
